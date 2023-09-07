@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Flag Project</title>
+  <style>
+    .flag {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.flag:before, .flag:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+}
+
+.flag:before {
+  height: 134px;
+  background: white;
+  top: 133px;
+}
+
+.flag:after {
+  top: 160px;
+  background: #007a4d;
+  height: 80px;
+}
+
+.f1 {
+  border-top: 200px solid #de3831;
+  border-bottom: 200px solid #002395;
+}
+
+.f1:before, .f1:after, .f2:before {
+  position: absolute;
+  content: '';
+  display: block;
+  border-width: 382px 573px;
+  top: -182px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.f1:before {
+  border-left-color: #007a4d;
+  left: -201px;
+  z-index: 1;
+}
+
+.f1:after {
+  border-left-color: #fff;
+  left: -153px;
+}
+
+.f2:before {
+  top: -382px;
+  border-left-color: #000;
+  left: -621px;
+}
+
+.f2 {
+  border-style: solid;
+  border-color: transparent transparent transparent #ffb612;
+  border-width: 382px 573px;
+  top: -182px;
+  position: absolute;
+  left: -345px;
+  z-index: 1;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="flag">
+    <div class="f1"></div>
+    <div class="f2"></div>
+</body>
+
+</html>
