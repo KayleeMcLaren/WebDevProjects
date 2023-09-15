@@ -1,28 +1,28 @@
-var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+var numberOfDrumButtons = document.querySelectorAll(".drum").length; // gets the number of drum buttons
 
 for (var i = 0; i < numberOfDrumButtons; i++) {
 
-  document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function() { // adds an event listener to check if the drum button has been clicked 
 
     var buttonInnerHTML = this.innerHTML;
 
-    makeSound(buttonInnerHTML);
+    makeSound(buttonInnerHTML); // if it has been clicked, the correct spound is played
 
-    buttonAnimation(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML); // if it has been clicked, the button gets "animated"
 
   });
 
 }
 
-document.addEventListener("keypress", function(event) {
+document.addEventListener("keypress", function(event) { // adds an event listener to check if the corresponding key has been pressed for each drum button
 
-  makeSound(event.key);
+  makeSound(event.key); // if the key has been pressed, the correct spound is played
 
-  buttonAnimation(event.key);
+  buttonAnimation(event.key); // if the key has been pressed, the button gets "animated"
 
 });
 
-
+// function for playing the corresponsing sound for each drum button
 function makeSound(key) {
 
   switch (key) {
@@ -67,7 +67,7 @@ function makeSound(key) {
   }
 }
 
-
+//function to "animate" the drum buttons - fades the image in and out by adding the CSS "pressed" class and removing after 100 milliseconds
 function buttonAnimation(currentKey) {
 
   var activeButton = document.querySelector("." + currentKey);
