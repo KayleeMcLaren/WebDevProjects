@@ -6,7 +6,7 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-// checks if the has clicked on a tile - this starts the game
+// checks if the user has clicked on a tile - this starts the game
 $(document).keypress(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
@@ -63,7 +63,7 @@ function nextSequence() {
   playSound(randomChosenColour);
 }
 
-// function to animate the tile once it's been clicked on
+// function to animate the tile once it's been clicked on by adding the "pressed" CSS class and removing it after 100 milliseconds
 function animatePress(currentColor) {
   $("#" + currentColor).addClass("pressed");
   setTimeout(function () {
