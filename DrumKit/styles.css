@@ -16,6 +16,7 @@ footer {
   font-family: sans-serif;
 }
 
+/*Adds the images to the drum buttons*/
 .w {
   background-image: url("tom1.png");
 }
@@ -48,6 +49,7 @@ footer {
   margin: 10% auto;
 }
 
+/*Used to "animate" the drum buttons*/
 .pressed {
   box-shadow: 0 3px 4px 0 #DBEDF3;
   opacity: 0.5;
