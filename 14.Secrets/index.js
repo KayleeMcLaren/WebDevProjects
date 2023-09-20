@@ -22,7 +22,7 @@ function passwordCheck(req, res, next) {
   if (password === "ILoveProgramming") {
     userIsAuthorised = true;
   }
-  next();
+  next(); // The next function determines when to move on from the middleware and continue to the handlers
 }
 // This function is registered as middleware using the app.use() method 
 // This means that it will be called for every incoming request
