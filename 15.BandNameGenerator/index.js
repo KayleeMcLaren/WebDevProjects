@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // Tells Express to use the 
 
 // Route handler that handles GET requests to the root URL (/). It renders the solution.ejs template
 app.get("/", (req, res) => {
-  res.render("solution.ejs");
+  res.render("index.ejs");
 });
 
 // Route handler handles POST requests to the /submit URL. It generates two random words, one adjective and one noun, and then renders the solution.ejs template with those words
